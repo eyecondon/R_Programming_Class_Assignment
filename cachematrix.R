@@ -1,10 +1,10 @@
-##  "C:/Users/Don/Desktop/R/Coursera/Class - R Programming/R_Programming_Class_Assignment"
-## 
+## "C:/Users/Don/Desktop/R/Coursera/Class - R Programming/R_Programming_Class_Assignment"
 ##  Lexical Scoping Assignment for Week 3 in R Programming Class.  
 
 ##  LEXICAL scoping (also known as STATIC scoping ) is used with many programming languages that 
 ##   sets the scope (range of functionality) of a variable so that it may only be called or referenced 
 ##   from within the block of code in which it is defined. The scope is determined when the code is compiled.
+##  
 
 ## --------------------------------------------------------------------------
 
@@ -52,15 +52,15 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
-
- inv <- x$getInverse()
- if(!is.null(inv)){
-         message("getting cached data")
-         return(inv)
- }
+        
+        inv <- x$getInverse()
+        if(!is.null(inv)){
+                message("getting cached data")
+                return(inv)
+        }
         data <- x$get()
         inv <- solve(data)
         x$setInverse(inv)
         inv
         
-        }
+}
